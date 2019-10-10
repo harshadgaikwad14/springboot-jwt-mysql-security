@@ -1,0 +1,78 @@
+{
+	"variables": [],
+	"info": {
+		"name": "springboot-jwt-mysql-security",
+		"_postman_id": "9c9c8bbe-e623-52b3-77ca-f830938bae8e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Access Resource",
+			"request": {
+				"url": "http://localhost:8080/hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU3MDc1NDU3MiwiaWF0IjoxNTcwNzM2NTcyfQ.-TogZSNjDOkPQ-oMpxfIMNv24t70ztz003EuuHXih5hIltE-KDWc7HoPHy59gMrsRPPdCnhBt3lopbN3G1JS9w",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"url": "http://localhost:8080/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE1NzA1NTkzMDAsImlhdCI6MTU3MDU0MTMwMH0.Hogb5AoF2KPiNHUFzzCmH9oMLQhdbKok3KQ17Z68Z_oU353_TfyzDZGvh_udFWreKsASdznSwDuH7ttq38XsIg",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"url": "http://localhost:8080/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE1NzA1NTkzMDAsImlhdCI6MTU3MDU0MTMwMH0.Hogb5AoF2KPiNHUFzzCmH9oMLQhdbKok3KQ17Z68Z_oU353_TfyzDZGvh_udFWreKsASdznSwDuH7ttq38XsIg",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
